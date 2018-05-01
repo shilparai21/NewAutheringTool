@@ -1,0 +1,47 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+
+      <a class='nav-link' routerLink="/dashboard">Dashboard</a>
+      <a class='nav-link' routerLink="/repository">Repository</a>
+      <a class='nav-link' routerLink="/wires">Wires</a>
+      <a class='nav-link' routerLink="/team">Team</a>
+      <a class='nav-link' routerLink="/admin">Admin</a>
+    </div>
+
+  </div>
+  </nav>
+
+<router-outlet></router-outlet>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+  </tr>
+  <tr *ngFor="let coin of coins">
+    <td>{{coin.id}}</td>
+    <td>{{coin.name}}</td>
+  </tr>
+</table>
+
+<h1>Angular2 HTTP Demo App</h1>
+<h2>Foods</h2>
+<ul>
+  <li *ngFor="let food of foods">{{food.name}}</li>
+</ul>
+<h2>Books and Movies</h2>
+<h3>Books</h3>
+<ul>
+  <li *ngFor="let book of books">{{book.title}}</li>
+</ul>
+<h3>Movies</h3>
+<ul>
+  <li *ngFor="let movie of movies">{{movie.title}}</li>
+</ul>
+
+<p appCrop>Highlight me!</p>
